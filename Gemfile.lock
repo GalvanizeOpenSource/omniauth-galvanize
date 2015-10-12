@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    omniauth-galvanize (0.0.1)
+    omniauth-galvanize (0.0.2)
       multi_json (~> 1.2)
       omniauth (~> 1.2)
       omniauth-oauth2 (~> 1.3)
