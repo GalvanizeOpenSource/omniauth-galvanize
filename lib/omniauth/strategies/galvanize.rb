@@ -11,6 +11,14 @@ module OmniAuth
                                 :token_url => '/accounts/token'
                             }
 
+      SETUP_PROC = lambda do |env|
+        if env['omniauth.strategy'].options[:sign_up]
+          env['omniauth.strategy'].options[:client_options][:authorize_url] = 'accounts/signup'
+        end
+      end
+
+      OmniAuth.config.before_request_phase = SETUP_PROC
+
       uid{ raw_info['results'][0]['id'] }
 
       info do
