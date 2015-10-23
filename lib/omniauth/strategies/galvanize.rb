@@ -29,8 +29,8 @@ module OmniAuth
             :last_name => raw_info['results'][0]['last_name'],
             :galvanize_id => raw_info['results'][0]['id'],
             :about => raw_info['results'][0]['about'],
-            :photo => raw_info['results'][0]['photo']
-
+            :photo => raw_info['results'][0]['photo'],
+            :roles => raw_info['results'][0]['roles']
         }
       end
 
