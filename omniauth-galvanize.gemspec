@@ -5,7 +5,7 @@ require 'omniauth-galvanize/version'
 Gem::Specification.new do |gem|
   gem.add_dependency 'omniauth', '~> 1.2'
   gem.add_dependency 'multi_json', '~> 1.2'
-  gem.add_dependency 'omniauth-oauth2', '~> 1.3'
+  gem.add_dependency 'omniauth-oauth2', '~> 1.3.1'
 
   gem.authors       = ['Chris Cunningham']
   gem.email         = ['chris.cunningham@galvanize.com']
