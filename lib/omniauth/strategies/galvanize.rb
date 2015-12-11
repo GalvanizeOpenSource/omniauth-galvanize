@@ -30,7 +30,8 @@ module OmniAuth
             :galvanize_id => raw_info['results'][0]['id'],
             :about => raw_info['results'][0]['about'],
             :photo => raw_info['results'][0]['photo'],
-            :roles => raw_info['results'][0]['roles']
+            :roles => raw_info['results'][0]['roles'],
+            :home_location => raw_info['results'][0]['home_location']
         }
       end
 
