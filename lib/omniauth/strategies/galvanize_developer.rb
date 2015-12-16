@@ -8,7 +8,6 @@ module OmniAuth
       option :name, 'galvanize_developer'
       option :fields, [:first_name, :last_name, :email, :role, :cohorts, :galvanize_id, :home_location]
       option :role_fields, [:role]
-      option :cohort_fields, [:cohorts]
       option :uid_field, :galvanize_id
 
       def request_phase
