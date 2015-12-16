@@ -31,7 +31,8 @@ module OmniAuth
             :about => raw_info['results'][0]['about'],
             :photo => raw_info['results'][0]['photo'],
             :roles => raw_info['results'][0]['roles'],
-            :home_location => raw_info['results'][0]['home_location']
+            :home_location => raw_info['results'][0]['home_location'],
+            :cohort => raw_info['results'][0]['cohorts']
         }
       end
 
