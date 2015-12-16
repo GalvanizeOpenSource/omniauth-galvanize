@@ -8,6 +8,7 @@ module OmniAuth
       option :name, 'galvanize_developer'
       option :fields, [:first_name, :last_name, :email, :role, :cohorts, :galvanize_id, :home_location]
       option :role_fields, [:role]
+      option :cohort_fields, [:cohort]
       option :uid_field, :galvanize_id
 
       def request_phase
@@ -25,13 +26,18 @@ module OmniAuth
 
       info do
         roles_array = []
+        cohorts_array = []
         options.fields.inject({}) do |hash, field|
           if options.role_fields.include?(field)
              roles_array << {name: request.params[field.to_s], description: "The description for #{field.to_s}"} unless request.params[field.to_s].blank?
+          elsif options.cohort_fields.include?(field)
+             cohorts_array << {name: request.params[field.to_s]} unless request.params[field.to_s].blank?
           else
             hash[field] = request.params[field.to_s]
           end
+
           hash[:roles] = roles_array
+          hash[:cohorts] = cohorts_array
           hash
         end
       end
