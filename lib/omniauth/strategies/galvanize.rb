@@ -43,7 +43,7 @@ module OmniAuth
       end
 
       def raw_info
-        @raw_info ||= access_token.get('/api/v3/me').parsed
+        @raw_info ||= access_token.get('/galvanize-api/v1/me').parsed
       end
     end
   end
