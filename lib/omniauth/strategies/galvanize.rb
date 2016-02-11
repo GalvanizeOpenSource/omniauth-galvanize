@@ -33,7 +33,8 @@ module OmniAuth
             :roles => raw_info['results'][0]['roles'],
             :home_location => raw_info['results'][0]['home_location'],
             :cohort => raw_info['results'][0]['cohorts'],
-            :companies => raw_info['results'][0]['companies']
+            :companies => raw_info['results'][0]['companies'],
+            :onboard_uuid => raw_info['results'][0]['onboard_uuid']
         }
       end
 
@@ -44,7 +45,7 @@ module OmniAuth
       end
 
       def raw_info
-        @raw_info ||= access_token.get('/galvanize-api/v1/me').parsed
+        @raw_info ||= access_token.get('/galvanize-api/v1/me?include_onboard=true').parsed
       end
     end
   end
