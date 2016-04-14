@@ -6,7 +6,7 @@ module OmniAuth
       include OmniAuth::Strategy
 
       option :name, 'galvanize_developer'
-      option :fields, [:first_name, :last_name, :email, :role, :cohorts, :galvanize_id, :home_location, :onboard_uuid, :photo]
+      option :fields, [:first_name, :last_name, :email, :role, :cohort, :galvanize_id, :home_location, :onboard_uuid, :photo]
       option :role_fields, [:role]
       option :cohort_fields, [:cohort]
       option :uid_field, :galvanize_id
@@ -37,7 +37,7 @@ module OmniAuth
           end
 
           hash[:roles] = roles_array
-          hash[:cohorts] = cohorts_array
+          hash[:cohort] = cohorts_array
           hash
         end
       end
