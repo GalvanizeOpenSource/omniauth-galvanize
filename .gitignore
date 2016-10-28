@@ -19,3 +19,4 @@
 .idea/*
 projectFilesBackup1/.idea/omniauth-galv.iml
 omniauth-galvanize-0.0.1.gem
+Gemfile.lock

@@ -2,22 +2,18 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'omniauth-galvanize/version'
 
-Gem::Specification.new do |gem|
-  gem.add_dependency 'omniauth', '~> 1.2'
-  gem.add_dependency 'multi_json', '~> 1.2'
-  gem.add_dependency 'omniauth-oauth2', '~> 1.3.1'
+Gem::Specification.new do |s|
+  s.name        = 'omniauth-galvanize'
+  s.version     = OmniAuth::Galvanize::VERSION
+  s.authors     = ['Chris Cunningham']
+  s.email       = ['chris.cunningham@galvanize.com']
+  s.homepage    = 'https://github.com/irishkurisu'
+  s.summary     = 'Galvanize adapter for OmniAuth.'
+  s.license     = 'MIT'
 
-  gem.authors       = ['Chris Cunningham']
-  gem.email         = ['chris.cunningham@galvanize.com']
-  gem.description   = %q{Galvanize adapter for OmniAuth.}
-  gem.summary       = gem.description
-  gem.homepage      = 'https://github.com/irishkurisu'
-  gem.license       = 'MIT'
+  s.files       = Dir['{lib}/**/*'] + ['MIT.LICENSE', 'README.md']
 
-  gem.executables   = `git ls-files -- bin/*`.split("\n").collect { |f| File.basename(f) }
-  gem.files         = `git ls-files`.split("\n")
-  gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  gem.name          = 'omniauth-galvanize'
-  gem.require_paths = ['lib']
-  gem.version       = OmniAuth::Galvanize::VERSION
+  s.add_dependency 'omniauth', '~> 1.2'
+  s.add_dependency 'multi_json', '~> 1.2'
+  s.add_dependency 'omniauth-oauth2', '~> 1.3.1'
 end
