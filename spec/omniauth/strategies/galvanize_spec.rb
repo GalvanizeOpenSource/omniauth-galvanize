@@ -72,7 +72,7 @@ describe OmniAuth::Strategies::Galvanize do
           home_location: '_home_location_',
           roles: [{name: 'Role1'}, {name: 'Role2'}],
           cohort: [{label: 'XX-XX-XX-01'}, {label: 'XX-XX-XX-02'}],
-          # cohorts: [{label: 'XX-XX-XX-01'}, {label: 'XX-XX-XX-02'}],
+          cohorts: [{label: 'XX-XX-XX-01'}, {label: 'XX-XX-XX-02'}],
           companies: [{name: 'Company1'}, {name: 'Company2'}],
         })
       end
