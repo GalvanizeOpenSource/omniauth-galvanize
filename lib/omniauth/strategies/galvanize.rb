@@ -25,6 +25,7 @@ module OmniAuth
         {
           galvanize_id: raw_result['id'],
           onboard_uuid: raw_result['onboard_uuid'],
+          salesforce_id: raw_result['salesforce_contact_id'],
           email: raw_result['email'],
           name: raw_result['name'],
           first_name: raw_result['first_name'],

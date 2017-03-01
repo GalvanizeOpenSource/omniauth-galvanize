@@ -31,6 +31,7 @@ describe OmniAuth::Strategies::Galvanize do
         'results' => [{
           'id' => 42,
           'onboard_uuid' => 'uuid42',
+          'salesforce_contact_id' => 'derikissocoolxoxo567Ae9Fd',
           'email' => 'email@example.com',
           'name' => 'Sterling Archer',
           'first_name' => 'Sterling',
@@ -63,6 +64,7 @@ describe OmniAuth::Strategies::Galvanize do
         expect(subject.info).to eq({
           onboard_uuid: 'uuid42',
           galvanize_id: 42,
+          salesforce_id: 'derikissocoolxoxo567Ae9Fd',
           email: 'email@example.com',
           name: 'Sterling Archer',
           first_name: 'Sterling',
